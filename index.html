@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crestberry Homes | Elevated Living by Nathan Johns & Leo Savino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #FDFBF7; color: #1a1a1a; }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        .bg-maroon { background-color: #4A0E0E; }
+        .text-maroon { color: #4A0E0E; }
+        .border-maroon { border-color: #4A0E0E; }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="antialiased">
 
+    <nav class="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#4A0E0E]/10 px-8 md:px-16 py-6 flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="serif text-3xl font-bold tracking-tight text-maroon leading-none">CRESTBERRY</span>
+            <span class="text-[10px] tracking-[0.4em] uppercase font-semibold mt-1">Homes</span>
+        </div>
+        <div class="hidden md:flex space-x-12 text-[11px] uppercase tracking-[0.2em] font-semibold">
+            <a href="#philosophy" class="hover:text-maroon transition">Philosophy</a>
+            <a href="#leadership" class="hover:text-maroon transition">Leadership</a>
+            <a href="#process" class="hover:text-maroon transition">The Method</a>
+            <a href="#contact" class="bg-maroon text-[#FDFBF7] px-8 py-3 hover:bg-black transition duration-300">Consultation</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920" alt="Luxury Home Exterior" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="relative z-20 text-center text-[#FDFBF7] px-4 max-w-5xl">
+            <h1 class="text-6xl md:text-8xl mb-8 leading-tight font-light">The Art of <br><span class="italic">Intentional</span> Living.</h1>
+            <p class="text-lg md:text-xl font-light tracking-widest uppercase mb-12 opacity-90">Exquisite Craftsmanship & Institutional Precision</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#process" class="border border-[#FDFBF7] px-12 py-5 uppercase tracking-widest text-xs hover:bg-[#FDFBF7] hover:text-maroon transition duration-500 font-bold">Discover the Method</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="philosophy" class="py-24 px-8 md:px-16 text-center max-w-4xl mx-auto">
+        <h2 class="text-maroon text-sm uppercase tracking-[0.4em] mb-8">A New Standard</h2>
+        <p class="serif text-3xl md:text-5xl leading-snug italic text-stone-700">
+            "We don't just build residences; we curate high-performance assets that balance contemporary openness with industrial-strength endurance."
+        </p>
+    </section>
+
+    <section id="leadership" class="py-24 px-8 md:px-16 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-maroon text-sm uppercase tracking-[0.4em] mb-4">Leadership</h2>
+                <p class="serif text-5xl">Vision & Precision</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-20">
+                <div class="group">
+                    <div class="aspect-[4/5] bg-stone-100 mb-8 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Nathan Johns" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000">
+                    </div>
+                    <h3 class="serif text-3xl mb-2">Nathan Johns</h3>
+                    <p class="text-maroon text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Founder & CEO</p>
+                    <p class="text-sm leading-relaxed text-stone-600 font-light">
+                        A veteran of the global financial sector with a career spanning Goldman Sachs, BNY, and Apex Group. Nathan brings institutional rigor and capital efficiency to the luxury residential market, ensuring every Crestberry build is a master-planned investment.
+                    </p>
+                </div>
+
+                <div class="group md:mt-32">
+                    <div class="aspect-[4/5] bg-stone-100 mb-8 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800" alt="Leo Savino" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000">
+                    </div>
+                    <h3 class="serif text-3xl mb-2">Leo Savino</h3>
+                    <p class="text-maroon text-[10px] uppercase tracking-[0.3em] font-bold mb-6">President</p>
+                    <p class="text-sm leading-relaxed text-stone-600 font-light">
+                        A 2x D Home Best Builder winner and SMU Alumni. Leo has revolutionized North Texas luxury through transitional design—creating sophisticated, industrial-strength homes that harmonize contemporary light with traditional warmth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 px-8 md:px-16 border-y border-maroon/10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-maroon text-sm uppercase tracking-[0.4em] mb-12">The Crestberry Method</h2>
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="border-l border-maroon/20 pl-8 py-4">
+                    <span class="serif text-4xl text-stone-300 block mb-4">01</span>
+                    <h4 class="serif text-2xl mb-4 font-bold">Capital Alignment</h4>
+                    <p class="text-xs text-stone-500 leading-relaxed uppercase tracking-widest font-semibold mb-4">The Financial Blueprint</p>
+                    <p class="text-sm text-stone-600">Institutional analysis of your goals ensuring your vision is grounded in fiscal reality.</p>
+                </div>
+                <div class="border-l border-maroon/20 pl-8 py-4">
+                    <span class="serif text-4xl text-stone-300 block mb-4">02</span>
+                    <h4 class="serif text-2xl mb-4 font-bold">Award-Winning Design</h4>
+                    <p class="text-xs text-stone-500 leading-relaxed uppercase tracking-widest font-semibold mb-4">The Aesthetic Core</p>
+                    <p class="text-sm text-stone-600">Bespoke transitional architecture led by Leo Savino’s industry-leading expertise.</p>
+                </div>
+                <div class="border-l border-maroon/20 pl-8 py-4">
+                    <span class="serif text-4xl text-stone-300 block mb-4">03</span>
+                    <h4 class="serif text-2xl mb-4 font-bold">Tech-Driven Build</h4>
+                    <p class="text-xs text-stone-500 leading-relaxed uppercase tracking-widest font-semibold mb-4">The Modern Process</p>
+                    <p class="text-sm text-stone-600">Real-time milestone tracking and proprietary management for total transparency.</p>
+                </div>
+                <div class="border-l border-maroon/20 pl-8 py-4">
+                    <span class="serif text-4xl text-stone-300 block mb-4">04</span>
+                    <h4 class="serif text-2xl mb-4 font-bold">Asset Turnover</h4>
+                    <p class="text-xs text-stone-500 leading-relaxed uppercase tracking-widest font-semibold mb-4">The Final Delivery</p>
+                    <p class="text-sm text-stone-600">A high-performance sanctuary delivered with a white-glove quality audit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-maroon text-[#FDFBF7] py-24 px-8 md:px-16">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="serif text-6xl mb-8">Ready to begin?</h2>
+                <p class="text-stone-300 tracking-widest uppercase text-xs mb-12">Serving Frisco, Southlake, & North Texas</p>
+                <div class="space-y-4 text-sm">
+                    <p class="font-light hover:text-stone-400 cursor-pointer transition">Office: Frisco, Texas</p>
+                    <p class="font-light hover:text-stone-400 cursor-pointer transition">Inquiries: hello@crestberryhomes.com</p>
+                </div>
+            </div>
+            <div class="bg-white p-10 text-maroon">
+                <h3 class="serif text-3xl mb-8 text-center">Private Consultation</h3>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Full Name" class="w-full border-b border-maroon/20 py-3 focus:outline-none focus:border-maroon text-sm font-light">
+                    <input type="email" placeholder="Email Address" class="w-full border-b border-maroon/20 py-3 focus:outline-none focus:border-maroon text-sm font-light">
+                    <textarea placeholder="Tell us about your project" rows="3" class="w-full border-b border-maroon/20 py-3 focus:outline-none focus:border-maroon text-sm font-light"></textarea>
+                    <button class="w-full bg-maroon text-white py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-black transition duration-300 mt-4">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 text-center opacity-50 text-[10px] tracking-[0.3em] uppercase font-bold">
+            © 2026 Crestberry Homes | Built by Johns Capital & Solutions
+        </div>
+    </footer>
+
+</body>
+</html>
