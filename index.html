@@ -13,7 +13,13 @@
         .text-maroon { color: #4A0E0E; }
         .border-maroon { border-color: #4A0E0E; }
         
-        /* High-fidelity image rendering */
+        /* SHARPNESS FIX: Enhances contrast and prevents blur during scaling */
+        .hero-img-optimize { 
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transform: translateZ(0); /* Triggers GPU acceleration for smoother rendering */
+        }
+
         .portrait-img { 
             image-rendering: -webkit-optimize-contrast;
             object-position: top;
@@ -37,12 +43,14 @@
     </nav>
 
     <header class="relative h-[85vh] flex items-center justify-center overflow-hidden border-b border-maroon/10">
-        <div class="absolute inset-0 bg-black/25 z-10"></div>
-        <img src="cbhomes1.jpg" alt="Crestberry Luxury Residence" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20 z-10"></div>
+        
+        <img src="cbhomes1.jpg" alt="Crestberry Luxury Residence" 
+             class="hero-img-optimize absolute inset-0 w-full h-full object-cover">
         
         <div class="relative z-20 text-center text-[#FDFBF7] px-4 max-w-5xl">
-            <h1 class="text-6xl md:text-8xl mb-8 leading-tight font-light">The Art of <br><span class="italic">Intentional</span> Living.</h1>
-            <p class="text-lg md:text-xl font-light tracking-widest uppercase mb-12 opacity-90">Exquisite Craftsmanship & Institutional Precision</p>
+            <h1 class="text-6xl md:text-8xl mb-8 leading-tight font-light drop-shadow-lg">The Art of <br><span class="italic">Intentional</span> Living.</h1>
+            <p class="text-lg md:text-xl font-light tracking-widest uppercase mb-12 opacity-90 drop-shadow-md">Exquisite Craftsmanship & Institutional Precision</p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
                 <a href="#process" class="border border-[#FDFBF7] px-12 py-5 uppercase tracking-widest text-xs hover:bg-[#FDFBF7] hover:text-maroon transition duration-500 font-bold">Discover the Method</a>
             </div>
@@ -57,14 +65,14 @@
     </section>
 
     <section id="leadership" class="py-32 px-8 md:px-16 bg-white overflow-hidden">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto text-center md:text-left">
             <div class="mb-24 text-center">
                 <h2 class="text-maroon text-sm uppercase tracking-[0.4em] mb-4 font-bold">Leadership</h2>
                 <p class="serif text-5xl md:text-6xl">Vision & Precision</p>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-start gap-16 lg:gap-32">
-                <div class="w-full max-w-[320px] space-y-8">
+                <div class="w-full max-w-[320px] space-y-8 mx-auto md:mx-0">
                     <div class="aspect-[4/5] bg-stone-50 overflow-hidden border border-stone-100 shadow-sm">
                         <img src="cbhomesnathan.jpg" alt="Nathan Johns" class="portrait-img w-full h-full object-cover hover:scale-105 transition duration-1000">
                     </div>
@@ -72,12 +80,12 @@
                         <h3 class="serif text-4xl mb-2">Nathan Johns</h3>
                         <p class="text-maroon text-[10px] uppercase tracking-[0.3em] font-bold mb-6">Founder & CEO</p>
                         <p class="text-sm leading-relaxed text-stone-600 font-light">
-                            A veteran of the global financial sector with a career spanning Goldman Sachs and BNY. Nathan brings institutional rigor and capital efficiency to the luxury residential market, ensuring every Crestberry build is a master-planned investment.
+                            A veteran of the global financial sector with experience at Goldman Sachs and BNY. Nathan brings institutional rigor and capital efficiency to the luxury residential market, ensuring every Crestberry build is a master-planned investment.
                         </p>
                     </div>
                 </div>
 
-                <div class="w-full max-w-[320px] space-y-8 md:mt-24">
+                <div class="w-full max-w-[320px] space-y-8 md:mt-24 mx-auto md:mx-0">
                     <div class="aspect-[4/5] bg-stone-50 overflow-hidden border border-stone-100 shadow-sm">
                         <img src="cbhomesleo.webp" alt="Leo Savino" class="portrait-img w-full h-full object-cover hover:scale-105 transition duration-1000">
                     </div>
