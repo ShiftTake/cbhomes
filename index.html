@@ -13,7 +13,7 @@
         .text-maroon { color: #4A0E0E; }
         .border-maroon { border-color: #4A0E0E; }
         
-        /* SHARPNESS FIX: Enhances contrast and prevents blur during scaling */
+        /* SHARPNESS & GPU FIX: Prevents extreme blur when scaling images */
         .hero-img-optimize { 
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
@@ -42,22 +42,30 @@
         </div>
     </nav>
 
-    <header class="relative h-[85vh] flex items-center justify-center overflow-hidden border-b border-maroon/10">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/20 z-10"></div>
+    <header class="relative h-[85vh] flex items-center overflow-hidden border-b border-maroon/10">
         
-        <img src="cbhomes1.jpg" alt="Crestberry Luxury Residence" 
-             class="hero-img-optimize absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-y-0 left-0 w-1/2 overflow-hidden border-r border-maroon/10">
+            <div class="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-black/20 z-10"></div>
+            <img src="cbhomes1.jpg" alt="Crestberry Luxury Residence - Perspective" 
+                 class="hero-img-optimize absolute inset-0 w-full h-full object-cover">
+        </div>
+
+        <div class="absolute inset-y-0 right-0 w-1/2 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/20 z-10"></div>
+            <img src="cbhomes2.jpg" alt="Crestberry Luxury Residence - Detail" 
+                 class="hero-img-optimize absolute inset-0 w-full h-full object-cover">
+        </div>
         
-        <div class="relative z-20 text-center text-[#FDFBF7] px-4 max-w-5xl">
-            <h1 class="text-6xl md:text-8xl mb-8 leading-tight font-light drop-shadow-lg">The Art of <br><span class="italic">Intentional</span> Living.</h1>
-            <p class="text-lg md:text-xl font-light tracking-widest uppercase mb-12 opacity-90 drop-shadow-md">Exquisite Craftsmanship & Institutional Precision</p>
+        <div class="relative z-20 text-center text-[#FDFBF7] px-4 max-w-5xl mx-auto">
+            <h1 class="text-6xl md:text-8xl mb-8 leading-tight font-light drop-shadow-xl">The Art of <br><span class="italic">Intentional</span> Living.</h1>
+            <p class="text-lg md:text-xl font-light tracking-widest uppercase mb-12 opacity-90 drop-shadow-lg">Exquisite Craftsmanship & Institutional Precision</p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
                 <a href="#process" class="border border-[#FDFBF7] px-12 py-5 uppercase tracking-widest text-xs hover:bg-[#FDFBF7] hover:text-maroon transition duration-500 font-bold">Discover the Method</a>
             </div>
         </div>
     </header>
 
-    <section id="philosophy" class="py-24 px-8 md:px-16 text-center max-w-4xl mx-auto border-b border-maroon/5">
+    <section id="philosophy" class="py-24 px-8 md:px-16 text-center max-w-4xl mx-auto border-b border-maroon/5 bg-[#FDFBF7]">
         <h2 class="text-maroon text-sm uppercase tracking-[0.4em] mb-8 font-bold">A New Standard</h2>
         <p class="serif text-3xl md:text-5xl leading-snug italic text-stone-700">
             "We don't just build residences; we curate high-performance assets that balance contemporary openness with industrial-strength endurance."
@@ -104,7 +112,7 @@
     <section id="process" class="py-24 px-8 md:px-16 border-y border-maroon/10 bg-[#FDFBF7]">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-maroon text-sm uppercase tracking-[0.4em] mb-12">The Crestberry Method</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-left">
                 <div class="border-l border-maroon/20 pl-8 py-4">
                     <span class="serif text-4xl text-stone-300 block mb-4">01</span>
                     <h4 class="serif text-2xl mb-4 font-bold text-maroon">Capital Alignment</h4>
@@ -133,13 +141,12 @@
         </div>
     </section>
 
-    <footer id="contact" class="bg-maroon text-[#FDFBF7] py-24 px-8 md:px-16">
+    <footer id="contact" class="bg-maroon text-[#FDFBF7] py-24 px-8 md:px-16 border-t border-white/5">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="serif text-6xl mb-8 leading-tight">Ready to <br>begin?</h2>
+                <h2 class="serif text-6xl mb-8 leading-tight text-white">Ready to <br>begin?</h2>
                 <p class="text-stone-300 tracking-widest uppercase text-xs mb-12">Serving Frisco, Southlake, & North Texas</p>
-                <div class="space-y-4 text-sm font-light">
-                    <p>Office: Frisco, Texas</p>
+                <div class="space-y-4 text-sm font-light text-stone-100">
                     <p>Inquiries: <span class="border-b border-white/30 pb-1">hello@crestberryhomes.com</span></p>
                 </div>
             </div>
@@ -153,7 +160,7 @@
                 </form>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 text-center opacity-40 text-[10px] tracking-[0.3em] uppercase font-bold">
+        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 text-center opacity-40 text-[10px] tracking-[0.3em] uppercase font-bold text-white">
             © 2026 Crestberry Homes | A Johns & Savino Partnership
         </div>
     </footer>
